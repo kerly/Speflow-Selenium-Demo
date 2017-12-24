@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using OpenQA.Selenium;
-using System.Threading;
 
 namespace Demo.Selenium.PageObjectModel.TypingTest
 {
@@ -29,18 +28,6 @@ namespace Demo.Selenium.PageObjectModel.TypingTest
         /// <param name="webDriver">IWebDriver</param>
         public TypingTestTestPage(IWebDriver webDriver) : base(webDriver)
         {
-        }
-
-        /// <summary>
-        /// Begin the typing test
-        /// </summary>
-        public void BeginTypingTest()
-        {
-            // Wait briefly for the page to load
-            Thread.Sleep(1000);
-
-            // Click the button to begin taking the typing test
-            WebDriver.FindElement(WebElementButtonStartTypingNow).Click();
         }
 
         /// <summary>

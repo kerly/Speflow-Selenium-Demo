@@ -14,7 +14,8 @@ namespace Demo.Selenium.PageObjectModel.TypingTest
         public override string URL { get { return "http://www.ratatype.com"; } }
 
         // Web Elements
-        public static By WebElementLinkTypingTest = By.PartialLinkText("Typing Test");
+        public static By WebElementLinkLogin = By.PartialLinkText("Log In");
+        public static By WebElementLinkTypingTest = By.XPath(@"//a[contains(@href, 'typing-test')]");
         public static By WebElementLinkTakeTypingTest = By.ClassName("submit");
 
         /// <summary>

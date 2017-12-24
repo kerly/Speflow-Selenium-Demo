@@ -52,6 +52,7 @@
     <Compile Include="PageObjectModel\Generic\AWebPageObjectModel.cs" />
     <Compile Include="PageObjectModel\Generic\IWebPageObjectModel.cs" />
     <Compile Include="PageObjectModel\TypingTest\TypingTestHomePage.cs" />
+    <Compile Include="PageObjectModel\TypingTest\TypingTestLoginPage.cs" />
     <Compile Include="PageObjectModel\TypingTest\TypingTestTestPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -19,32 +19,38 @@ namespace Demo.SpecFlow.StepDefinitions.TypingTest
             IWebPageObjectModel typingTestHomePage = new TypingTestHomePage(webDriver);
             typingTestHomePage.GoToPage();
         }
-        
-        [Given(@"I begin taking a typing test")]
-        public void GivenIBeginTakingATypingTest()
+
+        [Given(@"I log into the typing test website as ""(.*)"", ""(.*)""")]
+        public void GivenILogIntoTheTypingTestWebsite(string userName, string password)
         {
             // Get the Selenium driver from the context
             IWebDriver webDriver = ScenarioContext.Current.Get<IWebDriver>();
 
-            // Create an instance of the typing test home page
+            // Create an instance of the typing test pages
             TypingTestHomePage typingTestHomePage = new TypingTestHomePage(webDriver);
+            TypingTestLoginPage typingTestLoginPage = new TypingTestLoginPage(webDriver);
 
-            // Click the link to navigate to the typing test tab
-            typingTestHomePage.FindWebElement(TypingTestHomePage.WebElementLinkTypingTest, TimeSpan.FromSeconds(15)).Click();
+            // Navigate to the login page
+            typingTestHomePage.FindWebElement(TypingTestHomePage.WebElementLinkLogin, TimeSpan.FromSeconds(5)).Click();
 
-            // Click the button to go to the typing test page
-            typingTestHomePage.FindWebElement(TypingTestHomePage.WebElementLinkTakeTypingTest, TimeSpan.FromSeconds(15)).Click();
+            // Login
+            typingTestLoginPage.Login(userName, password);
         }
-        
+
         [When(@"I take the typing test")]
         public void WhenITakeTheTypingTest()
         {
             // Get the Selenium driver from the context
             IWebDriver webDriver = ScenarioContext.Current.Get<IWebDriver>();
-            TypingTestTestPage typingTestTestPage = new TypingTestTestPage(webDriver);
 
-            // Click the button to start the typing test
-            typingTestTestPage.BeginTypingTest();
+            // Create an instance of the typing test pages
+            TypingTestHomePage typingTestHomePage = new TypingTestHomePage(webDriver);
+            TypingTestTestPage typingTestTestPage = new TypingTestTestPage(webDriver);                        
+
+            // Click the links that start the typing test
+            typingTestHomePage.FindWebElement(TypingTestHomePage.WebElementLinkTypingTest, TimeSpan.FromSeconds(5)).Click();
+            typingTestHomePage.FindWebElement(TypingTestHomePage.WebElementLinkTakeTypingTest, TimeSpan.FromSeconds(5)).Click();
+            typingTestTestPage.FindWebElement(TypingTestTestPage.WebElementButtonStartTypingNow, TimeSpan.FromSeconds(5)).Click();
 
             // Take the typing test
             typingTestTestPage.TakeTypingTest();

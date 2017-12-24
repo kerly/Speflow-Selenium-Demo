@@ -4,6 +4,5 @@ Feature: MaxOutTypingTest
 
 Scenario: Max out the typing test
 	Given I navigate to the typing test website
-	And I begin taking a typing test
 	When I take the typing test
 	Then my score should be maxed out at "500" WPM
