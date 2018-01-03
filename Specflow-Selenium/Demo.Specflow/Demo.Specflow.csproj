@@ -58,6 +58,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Exceptions\TypingTest\InsufficientTypingAccuracyException.cs" />
+    <Compile Include="Exceptions\TypingTest\InsufficientTypingSpeedException.cs" />
     <Compile Include="Features\TypingTest\MaxOutTypingTest.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

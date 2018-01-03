@@ -5,4 +5,4 @@ Feature: MaxOutTypingTest
 Scenario: Max out the typing test
 	Given I navigate to the typing test website
 	When I take the typing test
-	Then my score should be maxed out at "500" WPM
+	Then my typing speed should be greater than "500" WPM with "100"% accuracy
