@@ -49,7 +49,7 @@ namespace Demo.Selenium.PageObjectModel.Generic
             WebDriverWait wait = new WebDriverWait(WebDriver, timeOut);
 
             // Wait for the element to become visible
-            IWebElement result = wait.Until<IWebElement>(ExpectedConditions.ElementIsVisible(elementLocator));
+            IWebElement result = wait.Until<IWebElement>(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(elementLocator));
 
             // Return the web element
             return result;
