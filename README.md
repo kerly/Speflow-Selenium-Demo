@@ -1,11 +1,11 @@
 # Speflow & Selenium Demo
 ## Overview
-This is a small solution demonstrating the powerful combontation of SpecFlow & Selenium. This solution can be used as a template to start other projects or simply expanded upon to add additional functionality.
+This is a small solution demonstrating the powerful combination of SpecFlow & Selenium. This solution can be used as a template to start other projects or simply expanded upon to add additional functionality.
 
 ## Included Features
 Feature | Description
 ------- | -------------
-MaxOutTypingTest | This feature demonstrates taking a typing test on the popular website [RataType](https://www.ratatype.com/typing-test/).
+TypingTestWorldRecord | This feature demonstrates taking a typing test at world record speeds on the popular website [RataType](https://www.ratatype.com/typing-test/).
 
 ## Setup Instructions
 To set up your environment to run this test you'll need the following:
@@ -15,7 +15,7 @@ To set up your environment to run this test you'll need the following:
 ## Run Instructions
 1. Open the solution in Visual Studio
 1. Build the solution in Visual Studio
-1. Open the Test Explorer window pane 
+1. Open the Test Explorer window pane
 1. Select the test to run and click "Run Selected Tests"
 
 ## License

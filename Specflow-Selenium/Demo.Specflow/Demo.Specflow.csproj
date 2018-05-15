@@ -63,10 +63,10 @@
   <ItemGroup>
     <Compile Include="Exceptions\TypingTest\InsufficientTypingAccuracyException.cs" />
     <Compile Include="Exceptions\TypingTest\InsufficientTypingSpeedException.cs" />
-    <Compile Include="Features\TypingTest\MaxOutTypingTest.feature.cs">
+    <Compile Include="Features\TypingTest\TypingTestWorldRecord.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>MaxOutTypingTest.feature</DependentUpon>
+      <DependentUpon>TypingTestWorldRecord.feature</DependentUpon>
     </Compile>
     <Compile Include="Hooks\WebBrowser\WebBrowserHooks.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -74,9 +74,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Features\TypingTest\MaxOutTypingTest.feature">
+    <None Include="Features\TypingTest\TypingTestWorldRecord.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>MaxOutTypingTest.feature.cs</LastGenOutput>
+      <LastGenOutput>TypingTestWorldRecord.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
